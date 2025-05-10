@@ -96,17 +96,3 @@ jobs:
           tag_name: Kernel-Caelum-${{ env.DEVICE_CODENAME }}-${{ env.KERNEL_VERSION }}-${{ env.DATE }}
           draft: false
           prerelease: false
-
-  notification:
-    runs-on: ubuntu-22.04
-    needs: build
-    steps:
-
-      - name: 📂 Checkout builder's sourcecode and get files
-        uses: actions/checkout@v4
-
-      - name: 🚀 Notify people on Discord
-        env:
-          DEVICE_CODENAME: OnePlus-7-Serie
-          KERNEL_VERSION: 4.14.355
-          NAME: Kernel-Caelum-OnePlus-7-Serie-4.14.355.zip
