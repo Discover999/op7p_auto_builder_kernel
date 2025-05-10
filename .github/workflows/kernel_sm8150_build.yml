@@ -109,7 +109,4 @@ jobs:
         env:
           DEVICE_CODENAME: OnePlus-7-Serie
           KERNEL_VERSION: 4.14.355
-          WEBHOOK: ${{ secrets.WEBHOOK }}
           NAME: Kernel-Caelum-OnePlus-7-Serie-4.14.355.zip
-        run: |
-          python3 .github/webhook.py
