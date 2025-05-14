@@ -17,7 +17,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_COMPILER_STRING=$(clang --version | head -n 1)
 export CCACHE_EXEC=$(which ccache)
-export KBUILD_BUILD_HOST="Caelum-Github-actions-Onelots"
+export KBUILD_BUILD_HOST="Github-actions-kernel"
 export LLVM_IAS=1
 echo "CONFIG_BUILD_ARM64_DT_OVERLAY=y" >> lineage_sm8150_defconfig
 
