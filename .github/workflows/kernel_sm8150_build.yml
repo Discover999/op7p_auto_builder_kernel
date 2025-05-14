@@ -38,7 +38,7 @@ jobs:
       - name: 📥 Clone AnyKernel3
         run: |
           cd kernel_oneplus_sm8150
-          git clone -b oneplus-7 --depth=1 https://github.com/Discover999/AnyKernel3.git anykernel
+          git clone -b oneplus-7 --depth=1 https://github.com/Oneloutre/AnyKernel3.git anykernel
           rm -rf anykernel/.git
 
       - name: 🔍 Device's codename and kernel's version
