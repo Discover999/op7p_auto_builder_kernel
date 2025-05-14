@@ -22,7 +22,7 @@ export LLVM_IAS=1
 echo "CONFIG_BUILD_ARM64_DT_OVERLAY=y" >> lineage_sm8150_defconfig
 
 # Configure kernel     
-make O=out ARCH=arm64 lineage_sm8150_defconfig vendor/kernelsu.config
+make O=out ARCH=arm64 lineage_sm8150_defconfig
 yes "" | make O=out ARCH=arm64 olddefconfig
 
 # Build kernel
