@@ -22,7 +22,7 @@ jobs:
  
       - name: ⚡ Checkout kernel's sourcecode and clone submodules
         run: |
-          git clone --depth=1 https://github.com/Discover999/kernel_oneplus_sm8150 -b 15
+          git clone --depth=1 https://github.com/Infinity-X-Devices/kernel_oneplus_sm8150 -b 15
 
       - name: 📅 Export date of build
         run: |
