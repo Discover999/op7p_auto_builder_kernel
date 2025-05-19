@@ -19,12 +19,22 @@ export KBUILD_COMPILER_STRING=$(clang --version | head -n 1)
 export CCACHE_EXEC=$(which ccache)
 export KBUILD_BUILD_HOST="Github-actions-kernel"
 export LLVM_IAS=1
-echo "CONFIG_BUILD_ARM64_DT_OVERLAY=y" >> lineage_sm8150_defconfig
+# echo "CONFIG_BUILD_ARM64_DT_OVERLAY=y" >> lineage_sm8150_defconfig
 
+echo "🚀Export required variables..."
+echo "⭐$ARCH"
+echo "⭐$SUBARCH"
+echo "⭐$KBUILD_COMPILER_STRING"
+echo "⭐$CCACHE_EXEC"
+echo "⭐$KBUILD_BUILD_HOST"
+
+echo "🌌Configure kernel..."
 # Configure kernel     
 make O=out ARCH=arm64 lineage_sm8150_defconfig
 yes "" | make O=out ARCH=arm64 olddefconfig
 
+
+echo "🔥Start Build..."
 # Build kernel
 make -j$(nproc --all) O=out \
     ARCH=arm64 \
