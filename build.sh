@@ -30,7 +30,7 @@ echo "⭐$KBUILD_BUILD_HOST"
 
 echo "🌌Configure kernel..."
 # Configure kernel     
-make O=out ARCH=arm64 sm8150-perf_defconfig
+make O=out ARCH=arm64 sm8150_defconfig
 yes "" | make O=out ARCH=arm64 olddefconfig
 
 
